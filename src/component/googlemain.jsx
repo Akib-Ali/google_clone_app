@@ -5,8 +5,11 @@ import { GoogleList } from "./googlelist"
 export const GoogleMain=()=>{
 
     const [inputval, setinputval]= useState({
-        title:" ",
-        creatername:" "
+        title:"",
+        creatername:"",
+        position:"",
+        date:"",
+        experience:""
    })
 
    const [storeData, setstoreData]= useState([])
@@ -18,10 +21,18 @@ export const GoogleMain=()=>{
         setstoreData((alldata)=>{
             return ([...alldata, inputval])
         })
-        setinputval.title(" ")
-    
+        
+    }
 
-     }
+
+    const handleDelete=(id)=>{
+      const updateddata =  storeData.filter((elem,index)=>{
+            return index != id
+
+    })
+        setstoreData(updateddata)
+
+  }
 
 
     console.log(storeData)
@@ -48,6 +59,7 @@ export const GoogleMain=()=>{
                 id={index}
                 elem={elem}
                 index={index}
+                handleDelete={handleDelete}
             />
 
 
