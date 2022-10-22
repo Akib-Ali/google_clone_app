@@ -13,7 +13,7 @@ export const GoogleInpt=(props)=>{
       }
 
 
-    // console.log(props.inputval)
+    
 
     return(
         <div>
@@ -21,9 +21,9 @@ export const GoogleInpt=(props)=>{
                  <input type="text" 
                  onChange={handleinput} 
                  autoComplete="off"
-                 name="title"  
-                 value={props.inputval.title} 
-                 placeholder="Enter Title"/>  
+                 name="company"  
+                 value={props.inputval.company} 
+                 placeholder="Enter Company Name"/>  
                  <br></br><br></br>
 
 
@@ -67,21 +67,6 @@ export const GoogleInpt=(props)=>{
                 </select>   <br></br> <br></br>
 
 
-                {/* <div style={{display:"flex" , gap:"20px"}}>
-
-                    <input type="radio" 
-                    checked={handleinput}
-                     name="gender"
-                     value={props.inputval.male}/>
-                     <label>Male</label> 
-
-                     <input type="radio"
-                        checked={handleinput}
-                        name="gender"
-                        value={props.inputval.female}
-                     />
-                     <label>Female</label>
-                </div> */}
  
 
 
